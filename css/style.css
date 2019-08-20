@@ -1,0 +1,320 @@
+@charset "utf-8";
+/* CSS Document */
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+
+@font-face {
+    font-family: 'proxima_nova';
+    src: url('../fonts/ProximaNova-Regular/proximanova-regular-webfont.woff2') format('woff2'),
+         url('../fonts/ProximaNova-Regular/proximanova-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* START STYLE*/
+
+/*TOP logo*/
+header{
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+#logo_style>img{
+	max-width: 166px;
+	max-height: 161px
+}
+
+.top,.project,.metrics,.datepick,.date,.content{
+	display: flex;
+}
+
+.project,.metrics,.datepick{
+	justify-content: flex-start
+}
+
+.top{
+	flex-direction: column;
+}
+
+.project{
+	flex-flow: row wrap;
+}
+
+.projectname{
+	font-family: myriad-pro,sans-serif;
+	font-style: normal;
+	color: #262626;
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 116.29px;
+	letter-spacing: -1.4px;
+}
+
+.projecttime{
+	position: relative;
+	top: 44px;
+	left: 10%;
+	border: 1px solid #6fabe4;
+	border-radius: 5px;
+	width: 149px;
+	height: 31px;
+}
+
+.projecttime>span{
+	position: relative;
+	top: 6px;
+	left: 20px;
+	font-size: 12px;
+	color: #4090db;
+}
+
+.metrics{
+	color: #3d4044;
+	font-family: "Proxima Nova";
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 24px;
+	flex-wrap: wrap;
+}
+
+.post,.followers,.following{
+	margin-right: 29px
+}
+
+.datepick{
+	margin: 21px 0 -80px;
+	flex-flow: row wrap
+}
+
+.date,.datestart,.dateend{
+	margin-right: 23px
+}
+
+.date{
+	color: #262626;
+	font-family: "Proxima Nova";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	position: relative;
+	top: 10px
+}
+
+.datestart>input,.dateend>input{
+	border-radius: 5px;
+	border-color: #d1d1d1;
+	width: 164px;
+	height: 31px;
+	position: relative;
+	top: -65px;
+	z-index: 10
+}
+
+.datestart::before,.dateend::before{
+	content: "";
+	display: block;
+	z-index: 11;		
+	position: relative;
+	top: 9px;
+	left: 100px;
+	width: 31px;
+	height: 31px;
+	background: #ebebeb;
+	border-radius: 5px;
+}
+
+.datestart-x::before,.dateend-x::before{
+	content: url(../img/ic_close_black_24dp.png);
+	display: block;
+	position: relative;
+	top: -13px;
+	left: 109px;
+	z-index: 12
+}
+
+.datestart::after,.dateend::after{
+	content: "";
+	display: block;
+	position: relative;
+	z-index: 11;
+	top: -99px;
+	left: 133px;
+	width: 31px;
+	height: 31px;
+	background: #ebebeb;
+	border-radius: 5px;
+}
+
+.datestart-x::after,.dateend-x::after{
+	content: url(../img/ic_date_range.png);
+	display: block;
+	position: relative;
+	z-index: 12;
+	top: -33px;
+	left: 140px
+}
+
+main{
+	background: linear-gradient(to bottom,#f0f0f0,#fafafa);
+}
+
+.content{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.contentimg{
+	width: 292px;
+	height: 292px;
+	background: url(../img/Rectangle_1.png);
+	position: relative;
+	padding: 0;
+	margin: 15px;
+		
+}
+
+.contentimg::after{
+	content: url(../img/Rectangle_1_copy.png);
+	display: block;	
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.contentimg span{
+	margin-right: 25px;
+}
+
+.today,.todaydata,.imgupload,.znakvideo{
+	position: relative;
+	z-index: 15;
+	color: #ffffff;
+	font-family: "Proxima Nova";
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.today,.todaydata{
+	height: 25px;
+	margin: 0 0 5px;
+	left: 20px;
+}
+
+.today{
+	top: -119px;
+}
+
+.todaydata{
+	top: -110px;
+}
+
+.imgupload{
+	top: -95px;
+	left: 53px;
+}
+
+.znakvideo{
+	top: -200px;
+	left: -25px
+}
+
+.otstup{
+	width: 100%;
+	margin: 0 auto -50px;
+	min-height: 100%;
+	padding-bottom: 50px;
+	box-sizing: border-box;	
+}
+
+.footer{
+	height: 50px;
+	padding: 12px 0 0
+}
+
+.control{
+	position: absolute;
+	left: 50%;
+	transform: translate(-62px)
+}
+
+.button{
+	width: 124px;
+	height: 28px;
+	border-radius: 15px;
+	background: rgba(0,0,0,0);
+	border: 1px solid #000000;
+	opacity: 1;
+	background-color: #fafafa
+}
+
+footer>li>a>span{
+	position: absolute;
+	top: 2px;
+	left: 21%;
+	color: #000000;
+	font-family: "Proxima Nova";
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase
+}
+
+li{
+	text-decoration: none;
+	list-style-type: none
+}
+
+
+
