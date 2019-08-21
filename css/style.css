@@ -65,6 +65,10 @@ header{
 	justify-content: center;
 }
 
+#logo_style{
+	margin: 0 70px
+}
+
 #logo_style>img{
 	max-width: 166px;
 	max-height: 161px
@@ -80,6 +84,7 @@ header{
 
 .top{
 	flex-direction: column;
+	margin: 0 20px
 }
 
 .project{
